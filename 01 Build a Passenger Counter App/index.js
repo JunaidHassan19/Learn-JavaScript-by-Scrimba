@@ -1,11 +1,6 @@
-let userName = "John Doe";
+// Create two variables, name and greeting. The name variable should store your name,
+// and the greeting should store e.g. "Hi, my name is "
+let name = "John Doe";
+let greeting = "Hi, my name is ";
 
-console.log(userName);
-
-// Create a variable, message, that stores the string: "You have tree new notifications"
-let message = "You have three new notifications";
-console.log(message);
-
-// Create a variable, messageToUser, that contains the message we have logged
-let messageToUser = message + ", " + userName;
-console.log(messageToUser);
+console.log(`${greeting}${name}`);
