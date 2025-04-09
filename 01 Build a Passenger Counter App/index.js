@@ -1,12 +1,12 @@
-let welcomeEl = document.getElementById("welcome-el");
+let countEl = document.getElementById("count-el");
+let count = 0;
 
-let name = "Junior";
-let greeting = "Welcome back ";
+function increment() {
+  // Change this to use the plus equal technique you've learned
+  count += 1;
+  countEl.innerText = count;
+}
 
-welcomeEl.innerText = greeting + name;
-
-// Add an emoji to the end! 👋
-// WRITE YOUR CODE BELOW HERE
-// HINT: count = count + 1
-
-welcomeEl.innerText += "👋";
+function save() {
+  console.log(count);
+}
