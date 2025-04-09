@@ -1,8 +1,11 @@
-// Create a function (you decide the name) that logs out the number 42 to the console
-// Call/invoke the function
+let lap1 = 34;
+let lap2 = 33;
+let lap3 = 36;
 
-function fun() {
-  console.log(24);
+// Create a function that logs out the sum of all the lap times
+
+function logLapTimes() {
+  console.log(lap1 + lap2 + lap3);
 }
 
-fun();
+logLapTimes();
