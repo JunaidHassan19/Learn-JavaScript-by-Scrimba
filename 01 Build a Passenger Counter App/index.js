@@ -10,7 +10,6 @@ function increment() {
 function save() {
   let countStr = count + " - ";
   saveEl.textContent += countStr;
+  countEl.innerText = 0;
+  count = 0;
 }
-
-// Google:
-// innerText alternative mdn
