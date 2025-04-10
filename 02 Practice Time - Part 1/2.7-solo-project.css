@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#home-score, #guest-score {
+  background: #0a0001;
+  border-radius: 10px;
+  font-size: 90px;
+  color: #F94F6D;
+  width: auto;
+  margin: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #add8e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  height: 80%;
+  margin: auto;
+}
+
+button {
+  background: lightcoral;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  padding: 3px 6px;
+}
+
+button:hover {
+  background: #F94F6D;
+  cursor: pointer;
+}
+
+
+
