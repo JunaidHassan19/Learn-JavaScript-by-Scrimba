@@ -36,5 +36,7 @@ function newCard() {
   console.log("Drawing a new card from the deck!");
   let card = 5;
   sum += card;
+  // Push the card to the cards array
+  cards.push(card);
   renderGame();
 }
