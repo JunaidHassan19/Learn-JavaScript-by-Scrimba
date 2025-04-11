@@ -23,4 +23,5 @@ if (age < 100) {
 }
 
 // In this example, since age is 100, the second condition is true
-// and "Here is your birthday card from the King!" will be logged to console
+// and "Here is your birthday card from the King!" will be logged to the console
+// If age were 101, the last condition would execute instead
