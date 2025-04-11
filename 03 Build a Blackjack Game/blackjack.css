@@ -20,12 +20,8 @@ h1 {
   font-style: italic;
 }
 
-/* 
-3. Style the button according to the provided design
-text color - #016f32
-width      - 150px
-background - goldenrod
- */
+/* 3. Make sure that the two buttons have some space between
+each other when they are rendered out vertically */
  
  button {
   color: #016f32;
@@ -36,4 +32,5 @@ background - goldenrod
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  margin: 4px 2px;
  }
