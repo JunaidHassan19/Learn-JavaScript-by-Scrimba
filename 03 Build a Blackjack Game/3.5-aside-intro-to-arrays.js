@@ -1,18 +1,27 @@
 // Arrays - ordered lists of items
 
+// 0 indexed
+// Arrays can hold any type of data
+
 let featuredPosts = [
   "Check out my Netflix clone",
   "Here's the code for my project",
   "I've just relaunched my portfolio",
 ];
+console.log(featuredPosts[0]); // Check out my Netflix clone
+console.log(featuredPosts[1]); // Here's the code for my project
 
-// Create an array that lists your i.e. experience, education, licenses, skills or similar
-// The items of the array should be strings
-
-let profile = [
-  "Full-Stack Developer",
-  "Software Engineer",
-  "Computer Science Graduate",
-  "Certified Scrum Master",
-  "React.js, Node.js, Python, Java",
+let experience = [
+  "CEO at Scrimba",
+  "Frontend developer at Xeneta",
+  "People counter for Norstat",
 ];
+
+// Make the following appear in the console:
+// Frontend developer at Xeneta
+// People counter for Norstat
+// CEO at Scrimba
+
+console.log(experience[1]);
+console.log(experience[2]);
+console.log(experience[0]);
