@@ -20,3 +20,6 @@ if (age < 21) {
 
 // In this example, since age is 22 (which is not less than 21),
 // the else block will execute and "Welcome!" will be logged to console
+// If age were less than 21, the first block would execute instead
+// and log "You can not enter the club!" to console
+// This program demonstrates how boolean values (true/false) work in conditional statements
