@@ -1,3 +1,4 @@
+// 2. Use getRandomCard() to set the values of firstCard and secondCard
 let firstCard = getRandomCard(); // Function call to get a random card
 let secondCard = getRandomCard(); // Function call to get a random card
 let cards = [firstCard, secondCard]; // Array to hold the cards
@@ -9,7 +10,10 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-// Create a function, getRandomCard(), that always returns the number 5
+// 1. Create a function, getRandomCard(), that always returns the number 5
+function getRandomCard() {
+  return 5; // This function will return a random card value (5 in this case)
+}
 
 function startGame() {
   renderGame();
@@ -37,6 +41,7 @@ function renderGame() {
 }
 
 function newCard() {
+  // 3. Use the getRandomCard() to set the value of card
   let card = getRandomCard();
   sum += card;
   cards.push(card);
