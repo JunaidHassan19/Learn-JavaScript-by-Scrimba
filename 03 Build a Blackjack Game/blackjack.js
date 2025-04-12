@@ -1,5 +1,5 @@
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = getRandomCard(); // Function call to get a random card
+let secondCard = getRandomCard(); // Function call to get a random card
 let cards = [firstCard, secondCard]; // Array to hold the cards
 let sum = firstCard + secondCard;
 let hasBlackjack = false;
@@ -9,13 +9,14 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+// Create a function, getRandomCard(), that always returns the number 5
+
 function startGame() {
   renderGame();
 }
 
 function renderGame() {
   cardsEl.textContent = "Cards: ";
-  // Create a for loop that renders out all the cards instead of just two
   for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += cards[i] + " ";
   }
@@ -36,8 +37,7 @@ function renderGame() {
 }
 
 function newCard() {
-  console.log("Drawing a new card from the deck!");
-  let card = 5;
+  let card = getRandomCard();
   sum += card;
   cards.push(card);
   renderGame();
