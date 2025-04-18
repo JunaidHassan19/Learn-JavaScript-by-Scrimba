@@ -10,3 +10,8 @@ button{
   margin: 4px 2px;
   cursor: pointer;
 }
+p{
+  font-size: 20px;
+  color: #ff0000;
+  margin: 20px;
+}
