@@ -9,7 +9,13 @@ inputBtn.addEventListener("click", function () {
   console.log(myLeads);
 });
 
-// Replace .textContent with .innerHTML and use <li> tags
+// Let's try a different method!
 for (let i = 0; i < myLeads.length; i++) {
-  ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
+  // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
+  // create element
+  // set text content
+  // append to ul
+  const li = document.createElement("li");
+  li.textContent = myLeads[i];
+  ulEl.append(li);
 }
