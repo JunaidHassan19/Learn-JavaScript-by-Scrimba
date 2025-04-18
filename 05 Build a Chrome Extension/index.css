@@ -1,21 +1,95 @@
 body {
   margin: 0;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #2d3748;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
 }
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   box-sizing: border-box;
-  border: 1px solid #5f9341;
-  margin-bottom: 4px;
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(66, 153, 225, 0.1);
+  background-color: #fff;
+  color: #2d3748;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
 }
 
 button {
-  background: #5f9341;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.2);
+  font-size: 14px;
+  margin-right: 8px;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(66, 153, 225, 0.25);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
+}
+
+ul {
+  margin-top: 30px;
+  list-style: none;
+  padding-left: 0;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+li {
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid #4299e1;
+}
+
+li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f8fafc;
+}
+
+li a {
+  color: #3182ce;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+li a:hover {
+  color: #2c5282;
+  text-decoration: underline;
 }
