@@ -22,7 +22,8 @@ greetUser("Welcome back");
 // Example 3: Function with multiple parameters
 // This function takes both greeting and name as parameters
 function greetUserComplete(greeting, name) {
-  welcomeEl.textContent = greeting + ", " + name + " 👋";
+  // welcomeEl.textContent = greeting + ", " + name + " 👋";
+  welcomeEl.textContent = `${greeting}, ${name} 👋`;
 }
 
 // Calling the function with two arguments
