@@ -1,22 +1,41 @@
 let myLeads = [];
+let oldLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
-// 1. Store the delete button in a deleteBtn variable
 const deleteBtn = document.getElementById("delete-btn");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
-  renderLeads();
+  render(myLeads);
 }
 
-// 2. Listen for double clicks on the delete button (google it!)
-// 3. When clicked, clear localStorage, myLeads, and the DOM
+function render(leads) {
+  let listItems = "";
+  for (let i = 0; i < leads.length; i++) {
+    listItems += `
+      <li>
+        <a target='_blank' href='${leads[i]}'>${leads[i]}</a>
+        <button class='delete-btn'>Delete</button>
+      </li>`;
+  }
+  ulEl.innerHTML = listItems;
+
+  const deleteBtns = document.querySelectorAll(".delete-btn");
+  deleteBtns.forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+      myLeads.splice(index, 1);
+      localStorage.setItem("myLeads", JSON.stringify(myLeads));
+      render(myLeads);
+    });
+  });
+}
+
 deleteBtn.addEventListener("dblclick", function () {
   localStorage.clear();
   myLeads = [];
-  renderLeads();
+  render(myLeads);
 });
 
 inputBtn.addEventListener("click", function () {
@@ -24,26 +43,5 @@ inputBtn.addEventListener("click", function () {
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
-  renderLeads();
+  render(myLeads);
 });
-
-function renderLeads() {
-  let listItems = "";
-  for (let i = 0; i < myLeads.length; i++) {
-    listItems += `
-      <li>
-        <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
-        <button class='delete-btn'>Delete</button>
-      </li>`;
-  }
-  ulEl.innerHTML = listItems;
-  //  4. Select all delete buttons inside the renderLeads function
-  const deleteBtns = document.querySelectorAll(".delete-btn");
-  deleteBtns.forEach((btn, index) => {
-    btn.addEventListener("click", function () {
-      myLeads.splice(index, 1);
-      localStorage.setItem("myLeads", JSON.stringify(myLeads));
-      renderLeads();
-    });
-  });
-}
