@@ -58,6 +58,32 @@ button:active {
   box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
 }
 
+#delete-btn {
+
+  background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+  font-size: 14px;
+  margin-right: 8px;
+  letter-spacing: 0.5px;
+}
+
+#delete-btn:hover {
+  background: linear-gradient(135deg, #c53030 0%, #9b2c2c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(255, 0, 0, 0.25);
+}
+#delete-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);
+}
+
 ul {
   margin-top: 30px;
   list-style: none;
