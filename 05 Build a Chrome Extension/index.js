@@ -2,16 +2,22 @@ let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
+// 1. Store the delete button in a deleteBtn variable
+const deleteBtn = document.getElementById("delete-btn");
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-// ["lead1", "lead2"] or null
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-
-// 1. Check if leadsFromLocalStorage is truthy
-// 2. If so, set myLeads to its value and call renderLeads()
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
   renderLeads();
 }
+
+// 2. Listen for double clicks on the delete button (google it!)
+// 3. When clicked, clear localStorage, myLeads, and the DOM
+deleteBtn.addEventListener("dblclick", function () {
+  localStorage.clear();
+  myLeads = [];
+  renderLeads();
+});
 
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
@@ -19,8 +25,6 @@ inputBtn.addEventListener("click", function () {
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
   renderLeads();
-
-  console.log(localStorage.getItem("myLeads"));
 });
 
 function renderLeads() {
@@ -29,7 +33,17 @@ function renderLeads() {
     listItems += `
       <li>
         <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
+        <button class='delete-btn'>Delete</button>
       </li>`;
   }
   ulEl.innerHTML = listItems;
+  //  4. Select all delete buttons inside the renderLeads function
+  const deleteBtns = document.querySelectorAll(".delete-btn");
+  deleteBtns.forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+      myLeads.splice(index, 1);
+      localStorage.setItem("myLeads", JSON.stringify(myLeads));
+      renderLeads();
+    });
+  });
 }
