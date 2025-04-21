@@ -25,12 +25,12 @@ function render(leads) {
     listItems += `
       <li>
         <a target='_blank' href='${leads[i]}'>${leads[i]}</a>
-        <button class='delete-btn'>Delete</button>
+        <button class='delete-li-btn'>Delete</button>
       </li>`;
   }
   ulEl.innerHTML = listItems;
 
-  const deleteBtns = document.querySelectorAll(".delete-btn");
+  const deleteBtns = document.querySelectorAll(".delete-li-btn");
   deleteBtns.forEach((btn, index) => {
     btn.addEventListener("click", function () {
       myLeads.splice(index, 1);
