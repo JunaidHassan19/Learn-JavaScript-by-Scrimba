@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "version": "1.1",
-  "name": "Quick Links",
-  "description": "Quick Links to your favorite sites",
+  "version": "1.2.0",
+  "name": "Custom Links",
+  "description": "A collection of your custom shortcuts.",
   "action": {
       "default_popup": "index.html",
       "default_icon": "icon.png"
