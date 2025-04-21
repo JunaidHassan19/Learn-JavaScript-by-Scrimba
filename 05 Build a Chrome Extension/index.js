@@ -14,7 +14,13 @@ if (leadsFromLocalStorage) {
 const tabs = [{ url: "https://www.linkedin.com/in/junaidhassan19/" }];
 
 tabBtn.addEventListener("click", function () {
-  // Save the url instead of logging it out
+  // Grab the URL of the current tab!
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    // since only one tab should be active and in the current window at once
+    // the return variable should only have one entry
+    let activeTab = tabs[0];
+    let activeTabId = activeTab.id; // or do whatever you need
+  });
   myLeads.push(tabs[0].url);
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
   render(myLeads);
