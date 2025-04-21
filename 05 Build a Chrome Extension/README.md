@@ -11,9 +11,9 @@ A simple Chrome extension for saving and managing custom links. This project is 
 - Delete all links at once
 - Links persist between browser sessions using local storage
 
-## Screenshots
+## Recording
 
-![Custom Links Extension](images/screenshot.png)
+![Custom Links Extension](images/recording.mp4)
 
 ## How It Works
 
